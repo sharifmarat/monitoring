@@ -1,0 +1,12 @@
+AddHandler cgi-script .cgi
+Options +ExecCGI 
+
+<Files "monitoring.sqlite">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "Monitoring.pm">
+Order Allow,Deny
+Deny from all
+</Files>

@@ -1,0 +1,57 @@
+<TMPL_INCLUDE name="body_start.tmpl">
+  <div id="container" class="hfeed">
+    <TMPL_INCLUDE name="header.tmpl">
+
+  <div id="wrapper" class="clearfix">
+    <div id="featured" class="grid col-940">
+      <div id="featured-content" class="grid col-460">
+
+        <h1 class="featured-title">Мониторинг</h1>
+        <h2 class="featured-subtitle"></h2>
+
+        <p>Этот веб-сайт предоставляет доступ к датчикам из бойлерной, находящейся в Бугульме.</p>
+        <p>Каждый час информация с датчиков поступает на почту, потом обрабатывается и в обработанном виде добавляется в базу. </p>
+        <p>По данным из базы строятся графики, которые вы можете найти на этом сайте.</p>
+        <p>В меню "Дополнительно > Забрать показания" можно принудительно проверить, нет ли новых данных с датчиков.</p>
+        <p>В меню "Дополнительно > Последние 10 писем" доступны последние письма с показаниями датчиков в необработанном виде.</p>
+      </div><!-- end of .col-460 -->
+
+      <div id="featured-image" class="grid col-460 fit">
+
+        Последние доступные показания:
+        <table  style="width:95%; "  class="easy-table easy-table-default " border="0">
+          <tbody>
+            <tr>
+              <td>Время</td><td><TMPL_VAR NAME=TIME_STR></td>
+            </tr>
+            <tr>
+              <td>Давление сырой воды на входе</td><td><TMPL_VAR NAME=P_SYROY_VHOD> кг/см<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Давление сетевой воды на входе</td><td><TMPL_VAR NAME=P_SETEVOY_VHOD> кг/см<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Давление сетевой воды на выходе</td><td><TMPL_VAR NAME=P_SETEVOY_VYHOD> кг/см<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Давление перегретой воды</td><td><TMPL_VAR NAME=P_PER_VODY> кг/см<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Температура сетевой воды на входе</td><td><TMPL_VAR NAME=T_SETEVOY_VHOD> &deg;C</td>
+            </tr>
+            <tr>
+              <td>Температура сетевой воды на выходе</td><td><TMPL_VAR NAME=T_SETEVOY_VYHOD> &deg;C</td>
+            </tr>
+            <tr>
+              <td>Температура перегретой воды</td><td><TMPL_VAR NAME=T_PER_VODY> &deg;C</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end of #featured-image -->
+    </div><!-- end of #featured --> 
+  </div> <!-- end of wrapper -->
+</div> <!-- end of container -->
+
+<TMPL_INCLUDE name="widgets.tmpl">
+<TMPL_INCLUDE name="footer.tmpl">
+<TMPL_INCLUDE name="body_end.tmpl">
